@@ -38,7 +38,6 @@ class Post {
 			$num_posts++;
 			$update_query = mysqli_query($this->con, "UPDATE users SET num_posts='$num_posts' WHERE username='$added_by'");
 
-			echo "Hello"
 		}
 	
 	}
