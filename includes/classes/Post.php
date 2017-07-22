@@ -104,6 +104,27 @@ class Post {
 					$last_name = $user_row['last_name'];
 					$profile_pic = $user_row['profile_pic'];
 
+					?>
+
+					<script>
+						function toggle<?php echo $id; ?>(){
+
+							var target = $(event.target);
+							if(!target.is("a")){
+								var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+							if(element.style.display == "block")
+								element.style.display = "none";
+							else
+								element.style.display = "block";
+							}
+						}
+					</script>
+					<?php
+
+					$commet_check = mysqli_query($this->con,"SELECT * FROM comments WHERE post_id='$id'");
+					$commet_check_num = mysqli_num_rows($commet_check);
+
 
 					//Timeframe
 					$date_time_now = date("Y-m-d H:i:s");
@@ -169,7 +190,7 @@ class Post {
 						}
 					}
 
-					$str .= "<div class='status_post'>
+					$str .= "<div class='status_post' onClick='jacascript:toggle$id()'>
 					<div class='post_profile_pic'>
 						<img src='$profile_pic' width='50'>
 					</div>
@@ -180,8 +201,19 @@ class Post {
 					<div id='post_body'>
 						$body
 						<br>
+						<br>
+						<br>
 					</div>
 
+					<div class='newsfeedPostOptions'>
+					   Comments($commet_check_num)&nbsp;&nbsp;&nbsp;
+					   <iframe src='like.php?post_id=$id' frameBorder='0' scrolling='no' ></iframe>
+
+					</div>
+
+				</div>
+				<div class='post_comment' id='toggleComment$id' style='display:none'>
+					<iframe src='comment_frame.php?post_id=$id' id='comment_iframe' frameBorder='0' ></iframe>
 				</div>
 				<hr>";
 			}

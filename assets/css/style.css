@@ -13,6 +13,11 @@ body {
 	background-color: #E6EAE8;
 }
 
+a {
+	color: #2c3e50;
+	text-decoration: none;
+}
+
 
 .top_bar{
 	width:100%;
@@ -159,6 +164,7 @@ textarea:focus {
 	width: 96%;
     font-size: 15px;
     min-height: 75px;
+    cursor: pointer;
 }
 
 .post_profile_pic{
@@ -170,4 +176,77 @@ textarea:focus {
 	float: left;
 	margin-right: 7px;
 
+}
+
+#comment_iframe{
+	max-height: 250px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 8px;
+
+}
+
+.comment_section {
+	padding: 0 5px 5px 5px;
+}
+
+.comment_section img {
+	margin: 0 6px 3px 3px;
+	border-radius: 25px;
+}
+
+#comment_form textarea {
+	border-color: #3D3D3D;
+	border-color: #D3D3D3;
+	width: 85%;
+	height: 35px;
+	border-radius: 5px;
+	color: #616060;
+	font-size: 14px;
+	margin:3px 3px 3px 5px;
+}
+
+#comment_form input[type="submit"] {
+	border:none;
+	background-color: #2ecc71;
+	color: #fff;
+	border-radius: 5px;
+	width: 13%;
+	height: 41px;
+	margin-top: 3px;
+	position: absolute;
+	font-family: 'Bellota-BoldItalic', sans-serif;
+	text-shadow: #95a5a6 0.5px 0.5px 0px;
+
+}
+
+.newsfeedPostOptions {
+	padding: 0px ;
+	text-decoration: none;
+	color:#000;
+	border:none;
+}
+
+.newsfeedPostOptions iframe {
+	border: 0px;
+	height: 17px;
+	width: 120px;
+}
+
+
+
+.comment_like {
+	background-color: transparent;
+	border: none;
+	font-size: 14px;
+	color: #3498db;
+	padding: 0;
+	height: auto;
+	width: auto;
+	margin: 0;
+}
+
+.like_value {
+	display: inline;
+	font-size: 14px;
 }
