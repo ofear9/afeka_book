@@ -126,6 +126,11 @@ nav a:hover {
 	width: 100%;
 }
 
+.posted_by {
+	padding: 0px 0px 5px;
+	color: #ACACAC;
+}
+
 .post_form textarea {
 	width: 81%;
 	height: 60px;
