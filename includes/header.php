@@ -1,5 +1,9 @@
 <?php 
 require 'config/config.php';
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
+include("includes/classes/Message.php");
+
 
 if(isset($_SESSION['username'])){
 	$userLoggedIn = $_SESSION['username'];
@@ -22,12 +26,17 @@ else{
 	<!-- Javascript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/bootbox.min.js"></script>
+	<script src="assets/js/demo.js"></script>
+	<script src="assets/js/jquery.jcrop.js"></script>
+	<script src="assets/js/jcrop_bits.js"></script>
 
 
 	<!--CSS -->
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 </head>
 <body>
 
@@ -51,7 +60,7 @@ else{
 		<a href="#">
 			<i class="fa fa-bell-o fa-lg"></i>
 		</a>
-		<a href="#">
+		<a href="requests.php">
 			<i class="fa fa-users fa-lg"></i>
 		</a>
 		<a href="#">
