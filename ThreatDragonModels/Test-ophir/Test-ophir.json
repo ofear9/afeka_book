@@ -1,9 +1,11 @@
 {
   "summary": {
-    "title": "Test-ophir"
+    "title": "Test-ophir",
+    "owner": "ophir"
   },
   "detail": {
     "contributors": [],
-    "diagrams": []
+    "diagrams": [],
+    "reviewer": "ophir"
   }
 }
